@@ -11,4 +11,7 @@
  * @link      https://github.com/benedmunds/Laravel-Composer
  */
 
-require path('base').DS.'vendor'.DS.'autoload.php';
+$path = path('base').DS.'vendor'.DS.'autoload.php';
+if (file_exists($path)) {
+  require_once($path);
+}
